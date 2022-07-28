@@ -20,6 +20,8 @@ import Home from './hooks/Home';
  import UseTransition from './hooks/useTransition/Index';
  import UseDeferredValue from './hooks/useDeferredValue/Index';
  import UseId from './hooks/useId/Index';
+ import UseSync from './hooks/useSync/Index';
+ import UseInsertion from './hooks/useInsertion/Index';
  
 
 const routes = [
@@ -76,6 +78,14 @@ const routes = [
             {
                 path: '/use-id',
                 element: <UseId/>,
+            },
+            {
+                path: '/use-sync',
+                element: <UseSync/>,
+            },
+            {
+                path: '/use-insertion',
+                element: <UseInsertion/>,
             },
         ]
     }
