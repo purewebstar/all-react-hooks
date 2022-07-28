@@ -1,13 +1,8 @@
-import React from 'react';
+import React, {useId} from 'react';         
 
-
-const Index = () =>{
-
-    return(
-        <>
-
-        </>
-    )
+const UseId = () =>{   
+  const id = useId();
+  return <div>id({id})</div>;
 };
 
-export default Index;
+export default UseId;
