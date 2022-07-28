@@ -2,7 +2,7 @@ import { useDeferredValue, useState } from 'react';
 
 const SlowUI = () => (
   <>
-    {Array(50)
+    {Array(300)
       .fill(1)
       .map((_, index) => (
         <span key={index}>{100000} </span>
@@ -27,6 +27,6 @@ const UseDeferredValue = () => {
       </div>
     </>
   );
-}
+};
 
 export default UseDeferredValue;

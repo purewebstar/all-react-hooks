@@ -1,26 +1,26 @@
 import { useEffect, useInsertionEffect, useLayoutEffect } from 'react';
 
 const Child = () => {
-  useEffect(() => {
-    console.log('useEffect child is called');
+  useEffect(() => {       
+    console.log('Child1');                               
   });
   useLayoutEffect(() => {
-    console.log('useLayoutEffect child is called');
+    console.log('Child2');                 
   });
   useInsertionEffect(() => {
-    console.log('useInsertionEffect child is called');
+    console.log('Child3');             
   });
 };
 
 const UseInsertionEFfect = () => {
   useEffect(() => {
-    console.log('useEffect app is called');
+    console.log('useEffect');
   });
   useLayoutEffect(() => {
-    console.log('useLayoutEffect app is called');
+    console.log('useLayoutEffect');
   });
   useInsertionEffect(() => {
-    console.log('useInsertionEffect app is called');
+    console.log('useInsertionEffect');
   });
   return (
     <div className="App">
@@ -28,6 +28,6 @@ const UseInsertionEFfect = () => {
       <p>Random Text</p>
     </div>
   );
-}
+};
 
 export default UseInsertionEFfect;
