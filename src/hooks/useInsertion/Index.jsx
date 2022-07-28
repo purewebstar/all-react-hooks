@@ -1,13 +1,33 @@
-import React from 'react';
+import { useEffect, useInsertionEffect, useLayoutEffect } from 'react';
 
-
-const Index = () =>{
-
-    return(
-        <>
-
-        </>
-    )
+const Child = () => {
+  useEffect(() => {
+    console.log('useEffect child is called');
+  });
+  useLayoutEffect(() => {
+    console.log('useLayoutEffect child is called');
+  });
+  useInsertionEffect(() => {
+    console.log('useInsertionEffect child is called');
+  });
 };
 
-export default Index;
+const UseInsertionEFfect = () => {
+  useEffect(() => {
+    console.log('useEffect app is called');
+  });
+  useLayoutEffect(() => {
+    console.log('useLayoutEffect app is called');
+  });
+  useInsertionEffect(() => {
+    console.log('useInsertionEffect app is called');
+  });
+  return (
+    <div className="App">
+      <Child />
+      <p>Random Text</p>
+    </div>
+  );
+}
+
+export default UseInsertionEFfect;
